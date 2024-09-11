@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter, setupCallTransaction } from './counter.js'
+import { setupCounter, setupCallTransaction, setupSendTransaction } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -19,10 +19,14 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
     <div class="card">
-      <button id="test" type="button">Test</button>
+      <button id="test" type="button">Test Deposit Call</button>
+    </div>
+    <div class="card">
+      <button id="test2" type="button">Test Send Tx Call</button>
     </div>
   </div>
 `
 
 setupCounter(document.querySelector('#counter'))
 setupCallTransaction(document.querySelector('#test'))
+setupSendTransaction(document.querySelector('#test2'))
